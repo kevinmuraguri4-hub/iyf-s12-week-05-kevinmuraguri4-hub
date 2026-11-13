@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly interactive to-do list built with HTML, CSS and JavaScript.">
+  <title>My To-Do List | Week 5</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Kevin's Task List</a>
+    <button id="theme-toggle" class="secondary-button" type="button" aria-pressed="false">🌙 Dark mode</button>
+  </header>
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">IYF Season 12 · Week 5</p>
+      <h1>My To-Do List</h1>
+      <p>Write down what you need to do, then take it one task at a time.</p>
+    </section>
+    <section class="todo-panel" aria-label="Task manager">
+      <form id="todo-form" class="todo-form">
+        <label class="visually-hidden" for="todo-input">New task</label>
+        <input id="todo-input" name="task" type="text" maxlength="120" placeholder="What needs to be done?" autocomplete="off" required>
+        <button type="submit">Add task</button>
+      </form>
+      <p id="form-message" class="message" role="status" aria-live="polite"></p>
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="active" aria-pressed="false">Active</button>
+          <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+        <span id="items-left" class="muted">0 items left</span>
+      </div>
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+      <div id="empty-state" class="empty-state">No tasks yet. Add your first task above.</div>
+      <div class="bottom-actions">
+        <button id="clear-completed" class="text-button" type="button">Clear completed</button>
+        <button id="clear-all" class="text-button danger-text" type="button">Clear all</button>
+      </div>
+    </section>
+    <p class="tip">Tip: Double-click a task name to edit it. Press Enter to save or Escape to cancel.</p>
+    <footer>Built with HTML, CSS and JavaScript · Week 5 practice</footer>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
