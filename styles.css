@@ -1,0 +1,20 @@
+:root{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#172033;background:#f3f6fb;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--page,#f3f6fb);color:var(--text,#172033);transition:background .2s,color .2s}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px max(5vw,20px);background:var(--panel,#fff);border-bottom:1px solid var(--border,#e3e8f0)}
+.brand{color:inherit;font-weight:800;text-decoration:none}.container{width:min(720px,92%);margin:48px auto}.intro{text-align:center;margin-bottom:28px}
+.eyebrow{color:#5268d8;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:800}h1{margin:8px 0;font-size:clamp(2rem,6vw,3rem)}
+.intro p:last-child,.muted,.tip,footer{color:var(--muted,#65718a)}.todo-panel{padding:26px;border-radius:18px;background:var(--panel,#fff);border:1px solid var(--border,#e3e8f0);box-shadow:0 16px 45px #26385b12}
+.todo-form{display:flex;gap:10px}input{min-width:0;flex:1;padding:13px 14px;border:1px solid var(--border,#d7deea);border-radius:10px;background:var(--input,#fff);color:inherit;font:inherit}
+button{border:0;border-radius:10px;padding:11px 16px;background:#5268d8;color:#fff;font:inherit;font-weight:700;cursor:pointer}button:hover{filter:brightness(.95)}
+button:focus-visible,input:focus-visible{outline:3px solid #9baaff;outline-offset:2px}.secondary-button,.filter-button{background:var(--soft,#edf0ff);color:var(--text,#27345a)}
+.message{min-height:20px;margin:8px 0 2px;color:#b42318;font-size:.9rem}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:16px 0;flex-wrap:wrap}
+.filters{display:flex;gap:6px}.filter-button{padding:8px 12px;font-size:.9rem}.filter-button.active{background:#5268d8;color:white}
+.todo-list{list-style:none;margin:0;padding:0}.todo-item{display:flex;align-items:center;gap:10px;padding:12px 4px;border-top:1px solid var(--border,#edf0f5)}
+.todo-item input[type=checkbox]{flex:0 0 auto;width:18px;height:18px;accent-color:#5268d8}.todo-text{flex:1;overflow-wrap:anywhere}
+.todo-item.completed .todo-text{color:var(--muted,#8791a5);text-decoration:line-through}.icon-button{padding:7px 10px;background:var(--soft,#edf0ff);color:var(--text,#27345a)}
+.delete-button{background:#fff0ef;color:#b42318}.edit-input{flex:1}.empty-state{padding:28px 8px;text-align:center;color:var(--muted,#65718a)}
+.bottom-actions{display:flex;justify-content:space-between;border-top:1px solid var(--border,#edf0f5);padding-top:14px;margin-top:8px}
+.text-button{padding:6px 0;background:transparent;color:#5268d8}.danger-text{color:#b42318}.tip{text-align:center;font-size:.9rem;margin:18px 0 44px}footer{text-align:center;font-size:.85rem}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+body.dark{--page:#101827;--panel:#192438;--text:#edf2ff;--muted:#a8b4ca;--border:#30405a;--input:#101827;--soft:#293754}
+@media(max-width:520px){.container{margin:28px auto}.todo-panel{padding:17px}.todo-form{flex-direction:column}.todo-form button{width:100%}.site-header{padding:14px 4%}}
